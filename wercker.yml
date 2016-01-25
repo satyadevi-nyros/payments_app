@@ -15,15 +15,7 @@ build:
 
         - script:
                 name: 
-                code: |
-                  python --version
-                  cd conf
-                  
-                  # no 'sudo' - try without it
-                  #./salt-requirements.sh
-                  me=`id -un`
-                  echo I am $me
-                  salt-call --local --pillar-root=$me --file-root=`pwd` state.template requirements.sls 
+                code: 
 
                   #pip install -r requirements.txt
                   #pip install psycopg2

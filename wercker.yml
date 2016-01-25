@@ -1,8 +1,5 @@
 box: python-slim
 
-build:
-    steps:
-        - virtualenv
 
 build:
     steps:

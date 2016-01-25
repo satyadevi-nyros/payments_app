@@ -1,0 +1,48 @@
+{% extends "payments/index.html" %}
+
+{% load i18n %}
+
+
+{% block head_title %}{% trans "Sign In" %}{% endblock %}
+
+{% block content %}
+<html>
+<body style="background-color:#D8C6B2;">
+<!-- action="/reply/{{feed.id}}/">
+ -->
+{{login_id.0}}
+<form class="signin" method="post" action="#">
+
+
+  {% csrf_token %}
+<h2 class="register">Login:</h2>
+{% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}
+     style="color:#EF0D35;">{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+   <table class="sign_table">
+      <tr>
+        <td>{{form.name.label}}:</td>
+        <td>{{form.name}}</td>
+        <td>{{form.name.errors}}</td>
+      </tr>
+  
+      <tr>
+        <td>{{form.password.label}}:</td>
+        <td>{{form.password}}</td>
+        <td>{{form.password.errors}}</td>
+      </tr>
+      
+ 
+</table>
+
+
+<button class="button" type="submit">Sign In</button>
+</form>
+</body>
+</html>
+{% endblock %}

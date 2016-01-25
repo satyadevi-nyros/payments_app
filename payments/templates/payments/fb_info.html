@@ -1,0 +1,124 @@
+{% extends "payments/index.html" %}
+
+{% block content %}
+<html>
+<body style="background-color:#D8C6B2;">
+
+
+	<form class="signin" method="post" action="#">
+		<!-- {{information}} -->
+		
+{% for list in total %}
+		
+<table>
+<tr>
+	<td>Profile Name:{{list.0}}</td>
+</tr>
+<tr>
+
+	<td><img src="https://graph.facebook.com/{{list.1}}/picture?type=large" ></td>
+</tr>
+<a href="https://www.facebook.com/{{list.2}}">{{list.2}}</a>
+
+</table>
+
+{% endfor %}
+
+
+</form>
+
+{% endblock %}	
+
+
+
+<!-- 
+CAAKMrAl97iIBACAtpcplBRWaiAAZCvIYYqpr6jcdEXZAwHuMYZBAcg745CnjEi2j8PEUyZAGCBlGg7D5QZBBoF1ZCgQAjZCEm6pRgeq5FHDeObdkZBiROZBQqbpRjhTkalWdS5GT6dZAjK2bOxQFJZCcxymMuSYMSZBme7Uh55PBcOQdcWkZBOM1WsnR8V8gZBpk7qcOYxHBjQ2YnOXN5izIRRvZAwJTF0y2pGZBXIIZD
+
+https://www.facebook.com/CAAKMrAl97iIBACAtpcplBRWaiAAZCvIYYqpr6jcdEXZAwHuMYZBAcg745CnjEi2j8PEUyZAGCBlGg7D5QZBBoF1ZCgQAjZCEm6pRgeq5FHDeObdkZBiROZBQqbpRjhTkalWdS5GT6dZAjK2bOxQFJZCcxymMuSYMSZBme7Uh55PBcOQdcWkZBOM1WsnR8V8gZBpk7qcOYxHBjQ2YnOXN5izIRRvZAwJTF0y2pGZBXIIZD/670839443061245
+
+
+json = JSON.load(open("https://graph.facebook.com/?ids=#1056991697666161&access_token=CAAKMrAl97iIBACAtpcplBRWaiAAZCvIYYqpr6jcdEXZAwHuMYZBAcg745CnjEi2j8PEUyZAGCBlGg7D5QZBBoF1ZCgQAjZCEm6pRgeq5FHDeObdkZBiROZBQqbpRjhTkalWdS5GT6dZAjK2bOxQFJZCcxymMuSYMSZBme7Uh55PBcOQdcWkZBOM1WsnR8V8gZBpk7qcOYxHBjQ2YnOXN5izIRRvZAwJTF0y2pGZBXIIZD"))
+
+
+https://graph.facebook.com/1056991697666161/albums?access_token=CAAKMrAl97iIBACAtpcplBRWaiAAZCvIYYqpr6jcdEXZAwHuMYZBAcg745CnjEi2j8PEUyZAGCBlGg7D5QZBBoF1ZCgQAjZCEm6pRgeq5FHDeObdkZBiROZBQqbpRjhTkalWdS5GT6dZAjK2bOxQFJZCcxymMuSYMSZBme7Uh55PBcOQdcWkZBOM1WsnR8V8gZBpk7qcOYxHBjQ2YnOXN5izIRRvZAwJTF0y2pGZBXIIZD
+
+
+    https://graph.facebook.com/?99394368305/access_token=CAAKMrAl97iIBACAtpcplBRWaiAAZCvIYYqpr6jcdEXZAwHuMYZBAcg745CnjEi2j8PEUyZAGCBlGg7D5QZBBoF1ZCgQAjZCEm6pRgeq5FHDeObdkZBiROZBQqbpRjhTkalWdS5GT6dZAjK2bOxQFJZCcxymMuSYMSZBme7Uh55PBcOQdcWkZBOM1WsnR8V8gZBpk7qcOYxHBjQ2YnOXN5izIRRvZAwJTF0y2pGZBXIIZD
+
+
+    /?ids=platform,me
+
+    https://graph.facebook.com/1153999917963169/albums?access_token=CAAKMrAl97iIBACAtpcplBRWaiAAZCvIYYqpr6jcdEXZAwHuMYZBAcg745CnjEi2j8PEUyZAGCBlGg7D5QZBBoF1ZCgQAjZCEm6pRgeq5FHDeObdkZBiROZBQqbpRjhTkalWdS5GT6dZAjK2bOxQFJZCcxymMuSYMSZBme7Uh55PBcOQdcWkZBOM1WsnR8V8gZBpk7qcOYxHBjQ2YnOXN5izIRRvZAwJTF0y2pGZBXIIZD
+
+    graph.facebook.com
+  https://graph.facebook.com//photos?ids=733025543497075,1056991697666161
+
+
+  http://graph.facebook.com/940644332696568?fields=cover/access_token=CAAKMrAl97iIBACAtpcplBRWaiAAZCvIYYqpr6jcdEXZAwHuMYZBAcg745CnjEi2j8PEUyZAGCBlGg7D5QZBBoF1ZCgQAjZCEm6pRgeq5FHDeObdkZBiROZBQqbpRjhTkalWdS5GT6dZAjK2bOxQFJZCcxymMuSYMSZBme7Uh55PBcOQdcWkZBOM1WsnR8V8gZBpk7qcOYxHBjQ2YnOXN5izIRRvZAwJTF0y2pGZBXIIZD
+
+
+
+  https://graph.facebook.com/{{list.1}}/picture?type=large
+
+  http://graph.facebook.com/{user-id}?fields=cover
+
+
+
+  https://graph.facebook.com/940644332696568?fields=cover&access_token=CAAKMrAl97iIBACAtpcplBRWaiAAZCvIYYqpr6jcdEXZAwHuMYZBAcg745CnjEi2j8PEUyZAGCBlGg7D5QZBBoF1ZCgQAjZCEm6pRgeq5FHDeObdkZBiROZBQqbpRjhTkalWdS5GT6dZAjK2bOxQFJZCcxymMuSYMSZBme7Uh55PBcOQdcWkZBOM1WsnR8V8gZBpk7qcOYxHBjQ2YnOXN5izIRRvZAwJTF0y2pGZBXIIZD
+
+
+
+  print blockspring.runParsed("find-person-by-facebook-with-fullcontact", { "facebook_identifier": "940644332696568", "access_token":"CAAKMrAl97iIBACAtpcplBRWaiAAZCvIYYqpr6jcdEXZAwHuMYZBAcg745CnjEi2j8PEUyZAGCBlGg7D5QZBBoF1ZCgQAjZCEm6pRgeq5FHDeObdkZBiROZBQqbpRjhTkalWdS5GT6dZAjK2bOxQFJZCcxymMuSYMSZBme7Uh55PBcOQdcWkZBOM1WsnR8V8gZBpk7qcOYxHBjQ2YnOXN5izIRRvZAwJTF0y2pGZBXIIZD"  }, {"api_key":"br_20271_bc5d7a0f10cd3e0d663edca722112ee396b64d00" "using_username": True }, {"api_key":"br_20271_46a1f5f517eae67cbe36db612ec010e126944349"}).params
+
+
+
+  print blockspring.runParsed("find-person-by-facebook-with-fullcontact", { "facebook_identifier":"940644332696568", "using_username": True,"access_token":"CAAKMrAl97iIBACAtpcplBRWaiAAZCvIYYqpr6jcdEXZAwHuMYZBAcg745CnjEi2j8PEUyZAGCBlGg7D5QZBBoF1ZCgQAjZCEm6pRgeq5FHDeObdkZBiROZBQqbpRjhTkalWdS5GT6dZAjK2bOxQFJZCcxymMuSYMSZBme7Uh55PBcOQdcWkZBOM1WsnR8V8gZBpk7qcOYxHBjQ2YnOXN5izIRRvZAwJTF0y2pGZBXIIZD"}, {"api_key":"br_20271_46a1f5f517eae67cbe36db612ec010e126944349"}).params
+
+
+
+  https://api.fullcontact.com/v2/person.json?facebookId=940644332696568&apiKey=c1c0c87356fca432
+
+
+
+  https://api.fullcontact.com/v2/person.json?email=satyatulasi518@gmail.com&apiKey=c1c0c87356fca432
+
+  https://api.fullcontact.com/v2/name/normalizer.json?q=satya&apiKey=c1c0c87356fca432
+
+
+  me?fields=id,name,education,bio,cover,devices,email&debug=all
+
+
+        "cursors": {
+        "before": "MjE4MzQyNTg4MzEwNzE5",
+        "after": "NTAxNDE2NjU2NjY5OTc2"
+      },
+      "next": "https://graph.facebook.com/v2.5/629446047200369/albums?access_token=CAACEdEose0cBAOVAkviC8TLaCzia8IRu3rclvewYtv1epNip1yfbwgCnsKmyKZBMRp8W3zvgDuHiZAwfhp4X8BNLXXVM9JfjtruD4xMoI1kdLZBmEy4nZCtx7jWe7tBjDxtzlUrD6kvN38d8wZBTrTgKWafvEbmNCEZBbchyl9Nm2UL9ZAUwhXRFAavcWmgKmwcsAnJe5m8XQZDZD&pretty=0&fields=name%2C+photos.limit%282%29&limit=5&after=NTAxNDE2NjU2NjY5OTc2"
+
+      curl -i -X GET \
+ "https://graph.facebook.com/v2.5/me?fields=id%2Cname%2Cbio%2Cdevices%2Ccurrency&access_token=CAAXplwCnVNMBAOR634a6FnDcml8QvN8bGZA9mXzbWOC5LSuVc7lRjkfOjQYnW6fI8xoAdbzZAwkx3pKgIDrlDDCZBOaNNXojZCtI9lpV19zbudt2nYc2wu0i2Tvy0mT6gkZBIhAIMtAhWtmtfFQOCHRqCFp42KbAL9Q1TLvZCOqiY8MBRH04J8aIOhsCzX2kdkra4oKCddAwZDZD"
+
+ curl -i -X GET \
+ "https://graph.facebook.com/v2.5/me?fields=id%2Cname%2Cbio%2Cdevices%2Ccurrency%2Ceducation&access_token=CAAXplwCnVNMBAOR634a6FnDcml8QvN8bGZA9mXzbWOC5LSuVc7lRjkfOjQYnW6fI8xoAdbzZAwkx3pKgIDrlDDCZBOaNNXojZCtI9lpV19zbudt2nYc2wu0i2Tvy0mT6gkZBIhAIMtAhWtmtfFQOCHRqCFp42KbAL9Q1TLvZCOqiY8MBRH04J8aIOhsCzX2kdkra4oKCddAwZDZD"
+
+ https://graph.facebook.com/v2.5/search?
+    q=satya&amp;
+    type=user&access_token=CAAXplwCnVNMBAOR634a6FnDcml8QvN8bGZA9mXzbWOC5LSuVc7lRjkfOjQYnW6fI8xoAdbzZAwkx3pKgIDrlDDCZBOaNNXojZCtI9lpV19zbudt2nYc2wu0i2Tvy0mT6gkZBIhAIMtAhWtmtfFQOCHRqCFp42KbAL9Q1TLvZCOqiY8MBRH04J8aIOhsCzX2kdkra4oKCddAwZDZD"
+
+
+    https://graph.facebook.com/v2.5/12345678912345123?access_token=CAAXplwCnVNMBAOR634a6FnDcml8QvN8bGZA9mXzbWOC5LSuVc7lRjkfOjQYnW6fI8xoAdbzZAwkx3pKgIDrlDDCZBOaNNXojZCtI9lpV19zbudt2nYc2wu0i2Tvy0mT6gkZBIhAIMtAhWtmtfFQOCHRqCFp42KbAL9Q1TLvZCOqiY8MBRH04J8aIOhsCzX2kdkra4oKCddAwZDZD
+
+    https://graph.facebook.com/v2.5/680099905426463?fields=id,education,bio&access_token=CAAXplwCnVNMBAOR634a6FnDcml8QvN8bGZA9mXzbWOC5LSuVc7lRjkfOjQYnW6fI8xoAdbzZAwkx3pKgIDrlDDCZBOaNNXojZCtI9lpV19zbudt2nYc2wu0i2Tvy0mT6gkZBIhAIMtAhWtmtfFQOCHRqCFp42KbAL9Q1TLvZCOqiY8MBRH04J8aIOhsCzX2kdkra4oKCddAwZDZD
+
+    https://graph.facebook.com/v2.5/755079437970362?fields=id,education,bio,email&access_token=CAAXplwCnVNMBAOR634a6FnDcml8QvN8bGZA9mXzbWOC5LSuVc7lRjkfOjQYnW6fI8xoAdbzZAwkx3pKgIDrlDDCZBOaNNXojZCtI9lpV19zbudt2nYc2wu0i2Tvy0mT6gkZBIhAIMtAhWtmtfFQOCHRqCFp42KbAL9Q1TLvZCOqiY8MBRH04J8aIOhsCzX2kdkra4oKCddAwZDZD
+
+
+
+    https://graph.facebook.com/v2.5/755079437970362?fields=id,education&access_token=CAAKMrAl97iIBAGh3cGms29DnhB6LBwcrUMbQRYAreA051PIBL1LBrNEKdwl0VUtcoACCdLiRYp6drMeR39q70kgq9zoksQdViuhcgA4yQNtLZCd3aFOHmnQr6ZC1vwGgZAP3aciOziWZBI1QkZCOzmQ6s2jXvheRkypqMNJf6IsONYhJVZAuy647OiofZBTN9rUk6dMJogIIRXSiGM9V5LJUpM1EWx950oZD
+
+    https://graph.facebook.com/v1.0/755079437970362?fields=id&access_token=CAAXplwCnVNMBAOR634a6FnDcml8QvN8bGZA9mXzbWOC5LSuVc7lRjkfOjQYnW6fI8xoAdbzZAwkx3pKgIDrlDDCZBOaNNXojZCtI9lpV19zbudt2nYc2wu0i2Tvy0mT6gkZBIhAIMtAhWtmtfFQOCHRqCFp42KbAL9Q1TLvZCOqiY8MBRH04J8aIOhsCzX2kdkra4oKCddAwZDZD
+
+
+
+
+    GET /v1.0/{user-id} HTTP/1.1
+Host: graph.facebook.com -->

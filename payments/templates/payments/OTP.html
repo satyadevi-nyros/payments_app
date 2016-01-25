@@ -1,0 +1,33 @@
+{% extends "payments/index.html" %}
+
+{% block content %}
+<body style="background-color:#D8C6B2;">
+
+
+
+
+<form class="verification" method="POST" action="#">
+  {% csrf_token %}
+ <h3 class="register">One Time Password</h3>
+{% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}
+     style="color:#EF0D35;">{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+   <table class="otp">
+      <tr>
+        <td>OTP:</td>
+        <td><input type="text" name="otp"></td>
+        <td>{{form.otp.errors}}</td>
+      </tr>
+        
+</table>
+
+<button class="button_otp" type="submit">Submit</button>
+</form>
+</body>
+
+{% endblock %}

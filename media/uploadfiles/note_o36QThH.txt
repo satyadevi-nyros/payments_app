@@ -1,0 +1,57 @@
+Mysql settings
+--------------
+
+****************Installing mysql*******************
+$ pip install mysql 
+
+***************Entering in to mysql prompt*****************
+$ mysql -u root -p
+Enter password: 'root'
+mysql>
+
+***************Createing user and Database in mysql *****************
+Creating database for Compare Car Prices project
+
+mysql> create CompareCarsDB;
+
+Create a database user which we will use to connect to and interact with the database. Set the password to something strong and secure:
+
+mysql> create user Cars_admin @localhost IDENTIFIED BY 'Cars_admin';
+
+Need to do is give our database user access rights to the database we created
+
+mysql> GRANT ALL PRIVILEGES ON  CompareCarsDB.* TO Cars_admin@localhost;
+
+mysql>exit
+
+*************** Compare Cars Prices Database details *******************
+
+DATABASE:CompareCarsDB
+USER:Cars_admin
+PASSWORD:Cars_admin
+
+***************** mysql databse setting in setting.py *******************
+
+Need to change the Database settings in settings.py file
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'CompareCarsDB',
+        'USER': 'Cars_admin',
+        'PASSWORD': 'Cars_admin',
+        'HOST': 'localhost',
+        'PORT': '3306',
+    }
+}
+
+
+set the above settings in our project settings.py file
+
+now run makemigrations
+
+$python manage.py makemigrations
+
+$python manage.py migrate
+
+

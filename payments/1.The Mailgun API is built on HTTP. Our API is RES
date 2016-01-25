@@ -1,0 +1,142 @@
+These services help you to send these emails without having to configure and manage mail servers
+
+
+
+
+
+
+
+
+
+Mailgun is an email automation service provided by Rackspace.
+it is for developers purpose
+pricing is more compare to sendgrid
+The Email Service for Developers.
+Free plan
+1..Incoming Email Support:
+		Parse emails, including attachements and quoted text. Easily forward using different expression matches, including regex, and POST to HTTP. 
+2..Clicks Details (per Link, etc.):
+        Reporting available both through Control Panel and API
+3..WYSIWYG Newsletter Editor is not available in mailgun
+4.Free plan:
+        10,000 free per month
+
+supports:
+   1.24/7 Support:Online form submission.
+
+Send Grid::
+===========
+Cheap and simple
+their reputation for having the best deliverability rates.
+
+1..Incoming Email Support:
+           Parse inbound email, including attachments and content.
+
+2..Clicks Details (per Link, etc.):
+			Via real-time Event API webhook
+
+3..+$0,25 per thousand, in addition to monthly package
+4.Free plan:
+		400 emails per day
+
+supports:
+   1.24/7 Support: Online ticket generation.
+
+
+The main use of mail api is send bulk emails with in scheduled time.
+
+
+1.The Mailgun API is built on HTTP. Our API is RESTful and it:
+
+
+Uses predictable, resource-oriented URLs.
+Uses built-in HTTP capabilities for passing parameters and authentication.
+Responds with standard HTTP response codes to indicate errors.
+Returns JSON.
+
+three major features that Mailgun provides:
+
+    Sending Messages
+    Tracking Messages
+    Receiving, Forwarding and Storing Messages
+
+
+Features
+
+All of Mailgun’s features are available to both free and paid accounts.
+
+There are some limitations if you have not given us your payment information:
+
+    There is a limit of 10,000 emails per month.
+    Data for Logs and the Events API are stored for 2 days.
+
+If you have given us your payment information, there is no limit on number of messages sent and/or received and data retention for Logs and the Events API is at least 30 days.
+
+Sending Messages::
+===================
+There are two ways to send messages using Mailgun:
+HTTP API
+SMTP
+
+Message Queue::
+===============
+When you submit messages for delivery Mailgun places them in a message queue.
+You can submit a large amount of messages and Mailgun will automatically queue the delivery in compliance with the receiving domains’ guidelines and maximum allowed sending rate optimized for each ESP (email service provider) such as Yahoo, GMail, etc.
+
+Mailing Lists::
+================
+Mailing Lists provide a convenient way to send to multiple recipients by using an alias email address. Mailgun sends a copy of the message sent to the alias address to each subscribed member of the Mailing List.
+
+Scheduling Delivery::
+===================
+Mailgun also allows you to request a specific time for your message delivery by using the o:deliverytime parameter if sending via the API, or X-Mailgun-Deliver-By MIME header if sending via SMTP.
+
+Note::Messages can be scheduled for a maximum of 3 days in the future. 
+
+Tracking Messages::
+=================
+Once you start sending and receiving messages, it’s important to track what’s happening with them. We try to make tracking your messages as easy as possible through Events, Stats and Campaigns.
+
+Events::
+======
+Mailgun keeps track of every event that happens to every message (both inbound and outbound) and stores this data for at least 30 days for paid accounts and 2 days for free accounts.
+
+Tagging::
+========
+Sometimes it’s helpful to categorize your outgoing email traffic based on some criteria, perhaps separate signup emails from password recovery emails or from user comments. Mailgun lets you tag each outgoing message with a custom value. When you access stats on you messages, they will be aggregated by these tags.
+
+Tracking Clicks::
+===============
+Mailgun can keep track of every time a recipient clicks on links in your messages. 
+
+Tracking Opens::
+=================
+Mailgun can keep track of every time a recipient opens your messages.
+
+Tracking Unsubscribes::
+========================
+Mailgun can keep track of every time a recipient requests to be unsubscribed from your mailings 
+
+Tracking Spam Complaints::
+==========================
+Mailgun automatically keeps track of every time a recipient complains that a message is spam.
+
+Tracking Bounces::
+================
+An email message is said to “bounce” if it is rejected by the recipient SMTP server.
+
+Tracking Deliveries::
+=====================
+Mailgun tracks all successful deliveries of messages. A successful delivery occurs when the recipient email server responds that it has accepted the message.
+
+Tracking Failures::
+===================
+Mailgun tracks all delivery failures. Failures consist of both Hard Bounces (permanent failures) and Soft Bounces (temporary failures).
+
+Routes::
+=========
+You can define a list of routes to handle incoming emails. This idea of routes is borrowed from MVC web frameworks like Django or Ruby on Rails: if a message matches a route expression, Mailgun can forward it to your application via HTTP or to another email address or store the message temporarily (3 days) for subsequent retrieval.
+
+Route Filters::
+===============
+Route filters are expressions that determine when an action is triggered. You can create a filter based on the recipient of the incoming email, the headers in the incoming email or use a catch-all filter. Filters support regular expressions in the pattern to give you a lot of flexibility when creating them.

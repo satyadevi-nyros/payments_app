@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{% block head_title %}{% endblock %}</title>
+    {% block extra_head %}
+    {% endblock %}
+
+    {% load staticfiles %}
+       <link rel="stylesheet" type="text/css" href="{% static 'payments/style.css' %}" />
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+
+    <script src="https://checkout.stripe.com/checkout.js"></script>
+    <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+    <script type="text/javascript">
+  // This identifies your website in the createToken call below
+  Stripe.setPublishableKey('pk_test_I4slHmqS65lAvSntU7yEEKyG');
+  // ...
+</script>
+
+
+
+
+  </head>
+  <body>
+    {% block body %}
+
+  
+<div id="header"> 
+
+    <div class="top_banner">
+      <h1>Online File Uploading</h1>
+      <p>(save your files safely)</p>
+    </div>
+
+  </div>
+
+
+
+ <div id="page_content">
+
+    <div class="navigation">
+      <ul>
+      
+        {% if request.user.is_authenticated %}
+        <li>{% block nav-home %}<a href="/uploading/{{ request.user.id }}">Profile</a>{% endblock %}</li>
+        <li>{% block nav-admin %}<a href="{% url 'admin:index' %}">Admin</a>{% endblock %}</li>
+        
+        <li>{% block nav-upgrade %}<a href="/upgrade/{{request.user.id }}">Upgrade</a>{% endblock %}</li>
+        <li>{% block nav-logout %}<a href="{% url 'logout' %}">Logout</a>{% endblock %}</li>
+        {% else %}
+        <li>{% block nav-registration %}<a href="{% url 'signup' %}">Registration</a>{% endblock %}</li>
+        
+        <li>{% block nav-login %}<a href="{% url 'login' %}">Login</a>{% endblock %}</li>
+        {% endif %}
+        <li><a href="{% url 'image_upload' %}">Upload</a></li>
+        <li><a href="{% url 'image_update' %}">Update</a></li>
+        <li><a href="{% url 'check' %}">Check</a></li>
+     
+        
+      </ul>
+    </div>
+</div>
+
+
+
+
+
+
+    {% block error %}{% endblock %}
+    {% block content %}
+    {% endblock %}
+    {% endblock %}
+    {% block extra_body %}
+    {% endblock %}
+  </body>
+</html>

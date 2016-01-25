@@ -1,0 +1,32 @@
+{% extends "payments/index.html" %}
+
+{% block content %}
+<html>
+<body style="background-color:#D8C6B2;">
+
+
+	<form class="signin" method="post" action="#">
+{% for list in information %} 
+		<!-- <td>{{list}}</td> -->
+		<div class="ista_div">
+		<table>
+			<tr>
+		    <td>Profile Name:<a href={{list.0}}>{{list.1}}</a></td>
+		    </tr>
+		    <tr><td>Designation:{{list.2}}</td></tr>  
+
+     		<tr><td>place:{{list.3}}</td></tr>
+     		<tr></tr>
+     		<tr></tr>
+     		<tr></tr>
+
+     	</table>
+     </div>
+		<!-- {% for i in list %}
+		 {{i}}
+			{% endfor %} -->
+	
+{% endfor %}
+	</form>
+
+{% endblock %}	

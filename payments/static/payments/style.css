@@ -1,0 +1,280 @@
+.color{
+	color:red;
+	font-size: 20px;
+}
+
+.heading{
+margin: 0px 0px 10px;
+text-align: center;
+margin-top: 0px;
+font-size: 24px;
+}
+
+
+.nav-tabs > li > a {
+    margin-right: 70px;
+    line-height: 1.42857;
+    border: 1px solid transparent;
+    border-radius: 4px 4px 0px 0px;
+    color: #F95E09;
+    padding-left: 89px;
+}
+.bs-example{
+	margin-left: 470px;
+font-size: 21px;
+}
+
+.nav_div{
+background-color: #E6D39C;
+}
+/*
+body {
+    background: white url("images/file.png") no-repeat right bottom;
+}
+*/
+.image_div{
+height: 345px;
+}
+.register{
+	
+	margin-top: 51px;
+	margin-left: 244px;
+color: #24526A;
+	/*color: #5C0B65;*/
+}
+
+.register_success{
+	margin-top: 100px;
+margin-left: 245px;
+color: #24526A;
+font-size: 25px;
+}
+
+
+
+
+.signup{
+	margin-right: 309px;
+margin-left: 312px;
+   font-size: 16px;
+   background-color: #ECF0EC;
+   padding: 10px 10px 103px;
+	margin-top: -31px;
+
+}
+
+#customButton{
+	margin-left: 426px;
+	margin-top: 40px;
+}
+
+#upgradeButton{
+	margin-left: 178px;
+	margin-top: 40px;
+}
+
+.signin{
+	margin-right: 309px;
+margin-left: 312px;
+   font-size: 16px;
+   background-color: #ECF0EC;
+  /* margin-right: 234px;
+	margin-left: 253px;*/
+	/*padding: 10px;
+	padding-bottom: 110px;*/
+	padding: 10px 10px 103px;
+	margin-top: -31px;
+
+
+}
+/*font-size: 19px;
+background-color: #CCABCA;
+margin-right: 282px;
+margin-left: 307px;
+padding: 10px 10px 110px;*/
+
+.sign_table{
+	margin-left: 244px;
+margin-top: 68px;
+color:#24526A;
+}
+.signup_table{
+	margin-left: 244px;
+margin-top: 68px;
+color:#24526A;
+}
+
+.button{
+	margin-left: 390px;
+margin-top: 31px;
+/*padding: 10px 10px 35px;
+*/}
+.button_otp{
+	margin-left: 350px;
+margin-top: 31px;
+}
+
+.verification{
+	
+  background-color: #ECF0EC;
+  /* margin-right: 234px;
+	margin-left: 253px;*/
+	
+	padding: 10px 10px 85px;
+	margin-top: -31px;
+
+	margin-right: 309px;
+margin-left: 312px;
+   font-size: 16px;
+
+}
+
+.otp{
+	margin-left: 250px;
+margin-top: 68px;
+color:#24526A;
+}
+
+.upload{
+	
+ 	margin-top: 60px;
+	padding: 10px;
+	padding: 10px 10px 100px;
+	margin-right: 309px;
+margin-left: 312px;
+   font-size: 16px;
+   background-color: #ECF0EC;
+   margin-top: -31px;
+}
+
+.upload_table{
+	margin-left: 155px;
+margin-top: 35px;
+}
+
+.upload_button{
+	margin-left: 225px;
+	margin-top: 16px;
+}
+
+.profile{
+	
+	margin-top: 51px;
+	margin-left: 50px;
+	color: #24526A;
+
+	/*color: #5C0B65;*/
+}
+.profile_table{
+	margin-left: 140px;
+margin-top: 37px;
+color:#24526A;
+}
+
+body {
+    background-color: #D8C6B2
+   
+}
+
+
+
+#header{
+	background-color: #D8C6B2
+}
+
+
+.top_banner{
+	background:url("images/header.jpg") no-repeat left top;
+	height:220px;
+	padding:65px 95px 0 65px;
+	border:#6E6065 solid 1px;
+	margin-left: 313px;
+margin-right: 310px;
+}
+
+
+.navigation{
+	margin:0px 0px 30px;
+	padding:11px 5px;
+	border:#BBBFB4 solid 1px;
+	background: #ECF0EC;
+	margin-left: 301px;
+	margin-right: 298px;
+}
+
+.navigation ul{
+	margin:0px;
+	padding:0px;
+}
+
+.navigation ul li{
+	margin:40px;
+	padding:0px 32px;
+	display:inline;
+	font-size:15px;
+	list-style-type:none;
+	border-right:#91969a dotted 2px;
+}
+
+.navigation ul li a{
+	color:#03314b;
+	text-decoration:none;
+}
+
+.navigation ul li a:hover{
+	text-decoration:underline;
+}
+
+.navigation ul li:last-child {
+	border-right:none;
+}
+/*----end header----*/
+
+
+/*----start page content----*/
+#page_content{
+	background:#D8C6B2;
+	padding:10px;
+	
+}
+
+#page_content .right_section{
+	width:620px;
+	float:right;
+	padding:0px 20px;
+}
+
+#page_content .right_section .top_content{
+	padding:15px 0 0px 0;
+}
+
+#page_content .right_section .top_content .column_one{
+	width:295px;
+	float:left;
+	margin-bottom:20px;
+}
+
+#page_content .right_section .top_content .column_two{
+	width:295px;
+	float:right;
+	margin-bottom:20px;
+}
+
+.messages{
+
+font-size: 20px;
+list-style: none;
+margin-left: 200px;
+margin-top: 20px;
+}
+
+.ista_div{
+	margin-left: 45px;
+	margin-top: 24px;
+	margin-bottom: 45px;
+}
+
+.fb_img{
+	width: 200px;
+	height: 120px
+}

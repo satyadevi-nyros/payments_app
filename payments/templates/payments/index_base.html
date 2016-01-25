@@ -1,0 +1,32 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+{% load staticfiles %}
+<title>
+{%block title%} 
+{%endblock%}
+</title>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="{% static 'css/pdf.css' %}">
+<style type="text/css">
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, td, th {
+    border: 0px solid black;
+}
+ul{list-style-type: none!important;}
+
+{% block style %}
+{%endblock%}    
+</style>
+</head>
+<body>
+
+{%block content%}
+{%endblock%}
+
+</body>
+</html>

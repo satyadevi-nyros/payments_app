@@ -1,0 +1,95 @@
+{% extends "payments/index.html" %}
+
+{% load i18n %}
+
+{% block head_title %}
+{% trans "Signup" %}{% endblock %}
+
+{% block content %}
+
+
+<!-- <p>{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">sign in</a>.{% endblocktrans %}</p>
+ -->
+<body style="background-color:#D8C6B2;">
+
+<form class="signup"   method="post" action="">
+	{% csrf_token %}
+  <h2 class="register">Registration</h2>
+{% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}
+     style="color:#EF0D35;">{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+  <table class="signup_table">
+  		<tr>
+  			
+        <td>{{form.name.label}}:</td>
+        <td>{{form.name}}</td>
+        <td>{{form.name.errors}}</td>
+  		</tr>
+  		
+      <tr>
+        <td>{{form.email.label}}:</td>
+        <td>{{form.email}}</td>
+        <td>{{form.email.errors}}</td>
+      </tr>
+
+      <tr>
+        <td>{{form.password1.label}}:</td>
+        <td>{{form.password1}}</td>
+        <td>{{form.password1.errors}}</td>
+      </tr>
+
+      <tr>
+        <td>{{form.password2.label}}:</td>
+        <td>{{form.password2}}</td>
+        <td>{{form.password2.errors}}</td>
+      </tr>
+  		<tr>
+        <td>{{form.number.label}}:</td>
+        <td><input type"number" name="number"></td>
+        <td>{{form.number.errors}}</td>
+      </tr>
+      <tr>
+        <td>{{form.card_number.label}}:</td>
+        <td><input type"number" name="card_number"></td>
+        <td>{{form.card_number.errors}}</td>
+      </tr>
+      <tr>
+        <td>{{form.cvc.label}}:</td>
+        <td><input type"number" name="cvc"></td>
+        <td>{{form.cvc.errors}}</td>
+      </tr>
+      <tr>
+        <td>Expiration(MM/YYYY):</td>
+      </tr>
+      <tr>
+        <td>{{form.month.label}}:</td>
+       <td><input type"number" name="month"></td>
+       <td>{{form.month.errors}}</td>
+     </tr>
+     <tr>
+      <td>{{form.year.label}}:</td>
+       <td><input type"number" name="year"></td>
+       <td>{{form.year.errors}}</td>
+      </tr>
+
+      <tr>
+      <td><input type="radio" name="plan" value="MONTHLY_GOLD" required="True">Monthly gold($5.00) </td>
+      <td><input type="radio" name="plan" value="MONTHLY_PREMIUM" required="True">Monthly Premium($10.00) </td>
+     </tr>
+      <td><input type="radio" name="plan" value="GOLD" required="True">Gold($30.00) </td>
+      <td><input type="radio" name="plan" value="PREMIUM" required="True">Premium($49.99) </td>
+    </tr>
+      
+  </table>
+
+  <button id = "customButton" type="submit">Sign Up</button>
+</form>
+
+
+{% endblock %}
+<!-- http://stackoverflow.com/questions/28898536/how-to-generate-a-valid-sample-token-with-stripe -->

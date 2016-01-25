@@ -1,0 +1,35 @@
+
+Linkedin:
+
+Currently I am getting authenticated user(credentials provided in our application) instead of public other user information.
+
+I have tried to get other users public information but I am unable get it.why because I am getting error like this.
+
+"LinkedInError: 403 Client Error: Forbidden for url."
+
+I have checked with many resources but I am unable find the solution.finally I have contacted with Linkedin support team and stackoverflow also.Now I am waiting for his response.
+after getting response from  support I will let you know the possibilities sir.
+
+
+Facebook:
+
+I have tried to get other users public information but I am unable get it.why because I am getting "unauthorized token access" issue. 
+
+As of my knowledge there is no possibility to other users public information.
+
+I have checked with many resources but I am unable find the solution.finally I have contacted with Facebook support team and stackoverflow also.Now I am waiting for his response.
+after getting response from  support I will let you know the possibilities sir.
+
+
+Pinterest:
+
+I have tried to create app in developers blog.but I am unable to create because of getting collaboration issues.
+
+Actually There is no clear documentation for pinterest API.
+
+I have tried to find the solutions for this ,but I am unable find it.
+
+I have contacted with pintrest support, Now I am waiting for support replay.
+after getting response from  support I will let you know the possibilities sir
+
+

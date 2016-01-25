@@ -1,0 +1,19 @@
+{% extends "payments/index.html" %}
+
+{% block content %}
+
+<form method="POST" >
+	{% csrf_token %}
+	<p>{{information.0}}</p>
+<table>
+  		<tr>
+  			
+        <td>{{form.link_search.label}}:</td>
+        <td>{{form.link_search}}</td>
+        <td>{{form.link_search.errors}}</td>
+  		</tr>
+</table>
+</form>
+
+
+{% endblock %}

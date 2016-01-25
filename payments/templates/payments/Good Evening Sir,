@@ -1,0 +1,15 @@
+Good Evening Sir,
+
+ . 
+ .
+
+We have checked with BeautifulSoup scrapping technique but i did not get the users data.
+
+
+from facebook graph API we are getting public users username, user id and user profile photo only.
+
+we are getting authenticated user profile information.we have checked with many resources but we unable to find correct solution.and we have checked with other techniques like scrapping,blockspring api.but we unable to get the data 
+we have contacted different support teams but still now i did not receive any response.
+
+Regarding Linkedin api currently we are getting company search profile   
+information only.

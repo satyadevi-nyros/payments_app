@@ -1,29 +1,14 @@
 box: python:2.7
 
-#build:
-#    steps:
-#        - virtualenv
-
-#build:
-#    steps:
-#        - pip-install
-
 build:
     steps:
         - install-packages:
-            packages: openssh-client salt-minion
+            packages: 
 
         - script:
                 name: python unit test
                 code: |
-                  python --version
-                  cd conf
                   
-                  # no 'sudo' - try without it
-                  #./salt-requirements.sh
-                  me=`id -un`
-                  echo I am $me
-                  salt-call --local --pillar-root=$me --file-root=`pwd` state.template requirements.sls 
 
                   #pip install -r requirements.txt
                   #pip install psycopg2

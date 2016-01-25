@@ -1,15 +1,24 @@
-box: python:2.7
+# box: python:2.7
 
-build:
-    steps:
-        - install-packages:
-            packages: 
+# build:
+#     steps:
+#         - install-packages:
+#             packages: 
 
-        - script:
-                name: python unit test
-                code: |
-                  
+#         - script:
+#                 name: python unit test
+#                 code: |
 
-                  #pip install -r requirements.txt
-                  #pip install psycopg2
-                  python manage.py test
+
+#                   #pip install -r requirements.txt
+#                   #pip install psycopg2
+#                   python manage.py test
+
+
+box: python:2.7-slim
+dev:
+  steps:
+    - pip-install
+    - internal/watch:
+        code: python manage.py runserver
+        reload: true

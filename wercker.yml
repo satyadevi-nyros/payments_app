@@ -14,7 +14,7 @@ build:
             packages: openssh-client salt-minion
 
         - script:
-                name: python unit test
+                name: python SimpleTest
                 code: |
                   python --version
                   cd conf

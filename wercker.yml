@@ -4,7 +4,7 @@ dev:
     - pip-install
     - internal/watch:
         code: python manage.py runserver
-        # reload: true
+        reload: true
 # Build definition
 build:
   # The steps that will be executed on build

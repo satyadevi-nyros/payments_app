@@ -2,10 +2,6 @@ box: python 2.7
 
 build:
     steps:
-        - pip-install
-
-build:
-    steps:
         - script:
                 name: python unit test
                 code: |

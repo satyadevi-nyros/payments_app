@@ -1,5 +1,4 @@
-box: python-slim
-
+box: python 2.7
 
 build:
     steps:
@@ -7,11 +6,10 @@ build:
 
 build:
     steps:
-        - install-packages:
-            packages: openssh-client
-
         - script:
                 name: python unit test
                 code: |
                   pip install -r require.txt
                   python manage.py test                   
+
+

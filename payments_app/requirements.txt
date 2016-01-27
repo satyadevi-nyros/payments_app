@@ -1,6 +1,5 @@
 Django==1.8.5
 EasyProcess==0.2.1
-Pillow==3.0.0
 PyVirtualDisplay==0.1.5
 TwitterSearch==1.0.1
 URLObject==0.5

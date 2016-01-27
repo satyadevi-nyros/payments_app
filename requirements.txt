@@ -28,3 +28,4 @@ twilio==4.9.2
 twitter==1.17.1
 twython==3.3.0
 wsgiref==0.1.2
+django-cities-light==3.2.0

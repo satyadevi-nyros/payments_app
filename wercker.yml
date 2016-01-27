@@ -1,59 +1,20 @@
-box: python:2.7
-
-#build:
-#    steps:
-#        - virtualenv
-
-#build:
-#    steps:
-#        - pip-install
-
+box: python:2.7-slim
+dev:
+  steps:
+    - pip-install
+    - internal/watch:
+        code: python manage.py runserver
+        reload: true
+# Build definition
 build:
-    steps:
-        - install-packages:
-            packages: openssh-client salt-minion
+  # The steps that will be executed on build
+  steps:
+    # A step that executes `pip install` command
+    - pip-install
 
-        - script:
-                name: python unit test
-                code: |
-                  python --version
-                  cd conf
-                  
-                  # no 'sudo' - try without it
-                  #./salt-requirements.sh
-                  me=`id -un`
-                  echo I am $me
-                  salt-call --local --pillar-root=$me --file-root=`pwd` state.template requirements.sls 
-                  python manage.py test
-
-                  #pip install -r requirements.txt
-                  #pip install psycopg2
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# box: python 2.7
-
-# build:
-#     steps:
-#         - script:
-#                 name: python unit test
-#                 code: |
-#                   pip install -r require.txt
-#                   python manage.py test                   
-
-
+    # A custom script step, name value is used in the UI
+    # and the code value contains the command that get executed
+    - script:
+        name: python unit test
+        code: |
+          python manage.py test
